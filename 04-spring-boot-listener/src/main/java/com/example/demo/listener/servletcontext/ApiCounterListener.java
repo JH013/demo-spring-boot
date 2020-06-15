@@ -1,4 +1,4 @@
-package com.example.demo.listener;
+package com.example.demo.listener.servletcontext;
 
 import com.example.demo.util.MyCounter;
 
@@ -49,12 +49,9 @@ public class ApiCounterListener implements ServletContextListener {
         String filePath = sct.getAttribute("file-path").toString();
         try {
             int count = MyCounter.getCount();
-
             File file = new File(filePath);
             if (!file.exists()) {
-
                 file.createNewFile();
-
             }
 
             FileOutputStream fileOutputStream = new FileOutputStream(file);

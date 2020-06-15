@@ -1,4 +1,4 @@
-package com.example.demo.listener;
+package com.example.demo.listener.servletcontext;
 
 import com.example.demo.util.MyThread;
 
@@ -13,7 +13,7 @@ import javax.servlet.annotation.WebListener;
  * @Date 2020/6/15 0015 1:55
  * @Version 1.0
  */
-@WebListener
+//@WebListener
 public class ThreadListener implements ServletContextListener {
 
     private final Thread thread = new Thread(new MyThread());

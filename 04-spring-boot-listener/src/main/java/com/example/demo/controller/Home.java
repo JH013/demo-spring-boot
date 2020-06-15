@@ -1,7 +1,9 @@
 package com.example.demo.controller;
 
+import com.example.demo.listener.application.SpringEvent;
 import com.example.demo.util.MyCounter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.WebApplicationContext;
@@ -9,7 +11,6 @@ import org.springframework.web.context.WebApplicationContext;
 import javax.servlet.ServletContext;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,7 +24,10 @@ import java.util.Map;
 public class Home {
 
     @Autowired
-    WebApplicationContext webApplicationConnect;
+    private WebApplicationContext webApplicationConnect;
+
+    @Autowired
+    private ApplicationContext applicationContext;
 
     @RequestMapping("/app")
     public Map<String, Object> app() {
@@ -39,5 +43,11 @@ public class Home {
 
         MyCounter.increment();
         return map;
+    }
+
+    @RequestMapping("springevent")
+    public String springEvent(String msg) {
+        applicationContext.publishEvent(new SpringEvent(msg));
+        return msg;
     }
 }

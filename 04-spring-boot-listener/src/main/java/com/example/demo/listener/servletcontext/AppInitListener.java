@@ -1,4 +1,4 @@
-package com.example.demo.listener;
+package com.example.demo.listener.servletcontext;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
