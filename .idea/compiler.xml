@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="02-spring-boot-servlet" />
-        <module name="01-spring-boot-helloworld" />
         <module name="04-spring-boot-listener" />
+        <module name="02-spring-boot-servlet" />
         <module name="demo-spring-boot" />
+        <module name="06-spring-boot-upload" />
+        <module name="05-spring-boot-staticfile" />
+        <module name="01-spring-boot-helloworld" />
         <module name="03-spring-boot-filter" />
       </profile>
     </annotationProcessing>
@@ -21,6 +23,8 @@
       <module name="02-spring-boot-servlet" options="-parameters" />
       <module name="03-spring-boot-filter" options="-parameters" />
       <module name="04-spring-boot-listener" options="-parameters" />
+      <module name="05-spring-boot-staticfile" options="-parameters" />
+      <module name="06-spring-boot-upload" options="-parameters" />
     </option>
   </component>
 </project>

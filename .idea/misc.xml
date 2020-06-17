@@ -9,6 +9,8 @@
         <option value="$PROJECT_DIR$/02-spring-boot-servlet/pom.xml" />
         <option value="$PROJECT_DIR$/03-spring-boot-filter/pom.xml" />
         <option value="$PROJECT_DIR$/04-spring-boot-listener/pom.xml" />
+        <option value="$PROJECT_DIR$/05-spring-boot-staticfile/pom.xml" />
+        <option value="$PROJECT_DIR$/06-spring-boot-upload/pom.xml" />
       </list>
     </option>
   </component>
